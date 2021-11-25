@@ -3,6 +3,7 @@ import { Image, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-
 import Logo from '../../../images/Logo_1.png';
 import CustomeButton from '../../components/CustomeButton';
 import CustomeInput from '../../components/CustomeInput';
+import SocialSignInButton from '../../components/SocialSignInButton';
 
 const SignInScreen = () =>{
     const {height} = useWindowDimensions();
@@ -18,15 +19,7 @@ const SignInScreen = () =>{
         console.warn('forgot password Press');
     }
 
-    const onSignInWithFacebook = () =>{
-        console.warn('facebook')
-    }
-    const onSignInWithGoogle = () =>{
-        console.warn('google')
-    }
-    const onSignInWithApple = () =>{
-        console.warn('Apple')
-    }
+    
     const onSignOut = () =>{
         console.warn('signout')
     }
@@ -61,29 +54,8 @@ const SignInScreen = () =>{
             text='Forgot Password?' 
             onSignInPress={onForgotPassword}
             type = 'TERTIARY'    
-            />
-
-            <CustomeButton 
-            text='Sign in with Facebook' 
-            onSignInPress={onSignInWithFacebook}
-            bgColor='#E2EAF4'
-            fgColor='#4765A9'
-            />
-
-            <CustomeButton 
-            text='Sign in with Google' 
-            onSignInPress={onSignInWithGoogle}
-            bgColor='#FAE9EA'
-            fgColor='#DD4D44'
-            />
-
-            <CustomeButton 
-            text='Sign in with Apple' 
-            onSignInPress={onSignInWithApple}
-            bgColor='#e3e3e3'
-            fgColor='#363636'
-            />
-
+            />    
+            <SocialSignInButton/>
             <CustomeButton 
             text="Don't have an account? Create one" 
             onSignInPress={onSignOut}

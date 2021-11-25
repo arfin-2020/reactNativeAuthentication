@@ -3,7 +3,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import SignInScreen from './src/screens/signInScreen/SignInScreen';
-import SignUpScreen from './src/screens/signUpScreen/SignInScreen';
+import SignUpScreen from './src/screens/signUpScreen/SignUpScreen';
+
 
 
 

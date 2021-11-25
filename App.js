@@ -1,16 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+
 
 import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import SignInScreen from './src/screens/signInScreen/SignInScreen';
-import {
-  Text,View,StyleSheet
-} from 'react-native';
 
 
 
@@ -27,6 +19,7 @@ const App = () => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
+    backgroundColor: '#EAEAEA',
   }
 });
 

@@ -32,10 +32,10 @@ const SignInScreen = () =>{
     }
     return(
         <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={style.root}>
+        <View style={styles.root}>
             <Image 
             source = {Logo} 
-            style={[style.logo,{height: height * .3}]} 
+            style={[styles.logo,{height: height * .3}]} 
             resizeMode='contain'/>
         
             <CustomeInput 
@@ -97,7 +97,7 @@ const SignInScreen = () =>{
 }
 
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     root:{
         alignItems: 'center',
         padding: 20,

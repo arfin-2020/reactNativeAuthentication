@@ -37,12 +37,11 @@ const SignInScreen = () =>{
             source = {Logo} 
             style={[style.logo,{height: height * .3}]} 
             resizeMode='contain'/>
-            
+        
             <CustomeInput 
             placeholder='username' 
             value={username} 
             setValue={setUserName}
-            
             />
 
             <CustomeInput 
@@ -51,6 +50,7 @@ const SignInScreen = () =>{
             setValue={setPassword} 
             secureTextEntry
             />
+
             <CustomeButton 
             text='Sign in' 
             onSignInPress={onSignInPress}
@@ -69,24 +69,28 @@ const SignInScreen = () =>{
             bgColor='#E2EAF4'
             fgColor='#4765A9'
             />
+
             <CustomeButton 
             text='Sign in with Google' 
             onSignInPress={onSignInWithGoogle}
             bgColor='#FAE9EA'
             fgColor='#DD4D44'
             />
+
             <CustomeButton 
             text='Sign in with Apple' 
             onSignInPress={onSignInWithApple}
             bgColor='#e3e3e3'
             fgColor='#363636'
             />
+
             <CustomeButton 
             text="Don't have an account? Create one" 
             onSignInPress={onSignOut}
             bgColor='grey'
             fgColor='#090909'
             />
+            
         </View>
         </ScrollView>
     )

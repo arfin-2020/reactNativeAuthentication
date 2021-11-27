@@ -14,6 +14,9 @@ const SocialSignInButton  = () =>{
     const onSignInWithApple = () =>{
         console.warn('Apple')
     }
+    const signInPress = () =>{
+        console.warn('signInPress')
+    }
     return(
         <>
             <CustomeButton 
@@ -35,6 +38,12 @@ const SocialSignInButton  = () =>{
             onSignInPress={onSignInWithApple}
             bgColor='#e3e3e3'
             fgColor='#363636'
+            />
+             <CustomeButton 
+            text="Have an account? Sign in" 
+            onSignInPress={signInPress}
+            bgColor='grey'
+            fgColor='#090909'
             />
             
         </>

@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     container_TERTIARY: {
         backgroundColor: 'red',
     },
+    
     textstyle: {
         color: 'white',
         fontWeight: 'bold'

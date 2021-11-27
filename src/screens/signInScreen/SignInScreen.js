@@ -20,9 +20,7 @@ const SignInScreen = () =>{
     }
 
     
-    const onSignOut = () =>{
-        console.warn('signout')
-    }
+    
     return(
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.root}>
@@ -56,12 +54,7 @@ const SignInScreen = () =>{
             type = 'TERTIARY'    
             />    
             <SocialSignInButton/>
-            <CustomeButton 
-            text="Don't have an account? Create one" 
-            onSignInPress={onSignOut}
-            bgColor='grey'
-            fgColor='#090909'
-            />
+           
             
         </View>
         </ScrollView>

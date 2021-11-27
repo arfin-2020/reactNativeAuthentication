@@ -1,23 +1,25 @@
 
 
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, SafeAreaView } from 'react-native';
 import ConfirmEmailScreen from './src/screens/ConfirmEmailScreen';
 import SignInScreen from './src/screens/signInScreen/SignInScreen';
 import SignUpScreen from './src/screens/signUpScreen/SignUpScreen';
-
-
+import ForgotPasswordScreen from './src/screens/ForgotPasswordScreen'
+import NewPasswordScreen from './src/screens/NewPasswordScreen';
 
 
 const App = () => {
   
 
   return (
-    <View style={styles.screen}>
+    <SafeAreaView style={styles.screen}>
       {/* <SignInScreen/> */}
       {/* <SignUpScreen/> */}
-      <ConfirmEmailScreen/>
-    </View>
+      {/* <ConfirmEmailScreen/> */}
+      {/* <ForgotPasswordScreen/> */}
+      <NewPasswordScreen/>
+    </SafeAreaView>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, Image, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { Text, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
 import CustomeButton from '../../components/CustomeButton';
 import CustomeInput from '../../components/CustomeInput';
 import SocialSignInButton from '../../components/SocialSignInButton';

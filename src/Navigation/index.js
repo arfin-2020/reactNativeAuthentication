@@ -1,11 +1,17 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
+import SignInScreen from '../screens/signInScreen/SignInScreen';
 
- import {Text, View} from 'react-native';
- import { NavigationContainer } from '@react-navigation/native';
  const Navigation = () => {
+    const Stack = createNativeStackNavigator();
      return(
          <NavigationContainer>
-                <Text>React native Navigation</Text>
+                <createNativeStackNavigator>
+                    <Stack.Navigator>
+                        <Stack.Screen name='SignIn' component={SignInScreen}/>
+                    </Stack.Navigator>
+                </createNativeStackNavigator>
          </NavigationContainer>
      )
  }

@@ -2,18 +2,20 @@ import React, { useState } from 'react';
 import { Text, Image, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
 import CustomeButton from '../../components/CustomeButton';
 import CustomeInput from '../../components/CustomeInput';
+import { useNavigation } from '@react-navigation/native';
 
 const ConfirmEmailScreen = () => {
     
     const [code, setCode] = useState('');
 
+    const navigation = useNavigation();
 
     const onBackToSignIn = () => {
-        console.warn('onBackToSignIn')
+        navigation.navigate('SignIn');
     }
 
     const onConfirm = () =>{
-
+        navigation.navigate('Home');
     }
     const onResendPress = () =>{
 
@@ -36,10 +38,9 @@ const ConfirmEmailScreen = () => {
                 <CustomeButton
                     text='Resend code'
                     onPress={onResendPress}
-                    bgColor='#FFAB4C'
-              
-                    
+                    bgColor='#FFAB4C'  
                 />
+                
                 <CustomeButton
                     text='Back to sign in'
                     onPress={onBackToSignIn}

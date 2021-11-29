@@ -3,26 +3,32 @@ import { Text, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-n
 import CustomeButton from '../../components/CustomeButton';
 import CustomeInput from '../../components/CustomeInput';
 import SocialSignInButton from '../../components/SocialSignInButton';
+import { useNavigation } from '@react-navigation/native';
+
 
 const SignUpScreen = () => {
-    const { height } = useWindowDimensions();
+    
     // console.log(height);
     const [username, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [repeatPassword, setRepeatPassword] = useState('');
 
+    const navigation =  useNavigation();
 
     const onRegisterPressed = () => {
-        console.warn('onRegisterPressed')
+        navigation.navigate('ConfirmEmail')
     }
-
+    const onSignInPress = () => {
+        navigation.navigate('SignIn')
+    }
     const onTermsOfUsePressed = () =>{
-
+        console.log('onTermsOfUsePressed');
     }
     const onPrivacyPressed = () =>{
-
+        console.log('onPrivacyPressed');
     }
+  
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.root}>
@@ -54,7 +60,7 @@ const SignUpScreen = () => {
 
                 <CustomeButton
                     text='Register'
-                    onSignInPress={onRegisterPressed}
+                    onPress={onRegisterPressed}
                     type='PRIMARY'
                 />
 
@@ -65,6 +71,12 @@ const SignUpScreen = () => {
                 </Text>
                 <SocialSignInButton/>
 
+                <CustomeButton 
+                text="Have an account? Sign in" 
+                onPress={onSignInPress}
+                bgColor='grey'
+                fgColor='#090909'
+                />
 
             </View>
         </ScrollView>

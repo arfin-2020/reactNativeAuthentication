@@ -2,22 +2,21 @@ import React, { useState } from 'react';
 import { Text, Image, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
 import CustomeButton from '../../components/CustomeButton';
 import CustomeInput from '../../components/CustomeInput';
-
+import { useNavigation } from '@react-navigation/native';
 const ForgotPasswordScreen = () => {
     
     const [username, setUsername] = useState('');
 
+    const navigation = useNavigation();
 
     const onSendPressed = () => {
-        console.warn('onBackToSignIn')
+        navigation.navigate('NewPassword');
     }
 
     const onBackToSignIn = () =>{
-
+        navigation.navigate('SignIn');
     }
-    const onResendPress = () =>{
-
-    }
+   
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.root}>

@@ -4,6 +4,8 @@ import Logo from '../../../images/Logo_1.png';
 import CustomeButton from '../../components/CustomeButton';
 import CustomeInput from '../../components/CustomeInput';
 import SocialSignInButton from '../../components/SocialSignInButton';
+import { useNavigation } from '@react-navigation/native';
+
 
 const SignInScreen = () =>{
     const {height} = useWindowDimensions();
@@ -11,12 +13,17 @@ const SignInScreen = () =>{
     const [username, setUserName] = useState('');
     const [password, setPassword] =  useState('');
 
+    const navigation = useNavigation();
 
     const onSignInPress = () =>{
-        console.warn('signIn Press');
+    
+        navigation.navigate('Home');
     }
     const onForgotPassword = () =>{
-        console.warn('forgot password Press');
+        navigation.navigate('ForgotPassword');
+    }
+    const onSignUpPress = () =>{
+        navigation.navigate('SignUp');
     }
 
     
@@ -44,18 +51,22 @@ const SignInScreen = () =>{
 
             <CustomeButton 
             text='Sign in' 
-            onSignInPress={onSignInPress}
+            onPress={onSignInPress}
             type = 'PRIMARY' 
             />
 
             <CustomeButton 
             text='Forgot Password?' 
-            onSignInPress={onForgotPassword}
+            onPress={onForgotPassword}
             type = 'TERTIARY'    
             />    
-            <SocialSignInButton/>
-           
+            <SocialSignInButton/> 
             
+            <CustomButton
+            text="Don't have an account? Create one"
+            onPress={onSignUpPress}
+            type="TERTIARY"
+            />
         </View>
         </ScrollView>
     )

@@ -2,14 +2,14 @@ import React from 'react';
 import { Platform, StyleSheet, Text, TouchableNativeFeedback, TouchableOpacity, View } from 'react-native';
 
 
-const CustomeButton = ({ onSignInPress, text, type = 'PRIMARY', bgColor, fgColor }) => {
+const CustomeButton = ({ onPress, text, type = 'PRIMARY', bgColor, fgColor }) => {
     let TouchableCom = TouchableOpacity;
     if (Platform.OS === 'android' && Platform.Version >= 21) {
         TouchableCom = TouchableNativeFeedback;
     }
     return (
         <TouchableCom
-            onPress={onSignInPress}>
+            onPress={onPress}>
             <View style={[styles.container,
             styles[`container_${type}`],
             bgColor ? { backgroundColor: bgColor } : {}

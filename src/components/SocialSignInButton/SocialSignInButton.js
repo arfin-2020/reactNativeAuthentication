@@ -1,7 +1,7 @@
 import React from 'react';
-
-import {View, Text,} from 'react-native';
+// import CustomeButton from '../CustomeButton';
 import CustomeButton from '../CustomeButton';
+
 
 const SocialSignInButton  = () =>{
 
@@ -21,21 +21,21 @@ const SocialSignInButton  = () =>{
         <>
             <CustomeButton 
             text='Sign in with Facebook' 
-            onSignInPress={onSignInWithFacebook}
+            onPress={onSignInWithFacebook}
             bgColor='#E2EAF4'
             fgColor='#4765A9'
             />
 
             <CustomeButton 
             text='Sign in with Google' 
-            onSignInPress={onSignInWithGoogle}
+            onPress={onSignInWithGoogle}
             bgColor='#FAE9EA'
             fgColor='#DD4D44'
             />
 
-            <CustomeButton 
+            <CustomeButton
             text='Sign in with Apple' 
-            onSignInPress={onSignInWithApple}
+            onPress={onSignInWithApple}
             bgColor='#e3e3e3'
             fgColor='#363636'
             />

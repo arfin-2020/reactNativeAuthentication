@@ -14,9 +14,10 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "AuthenticationNative";
   }
+    @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }
 }
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-  super.onCreate(null);
-}
+

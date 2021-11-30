@@ -1,10 +1,10 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Image, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
 import Logo from '../../../images/Logo_1.png';
 import CustomeButton from '../../components/CustomeButton';
 import CustomeInput from '../../components/CustomeInput';
 import SocialSignInButton from '../../components/SocialSignInButton';
-import { useNavigation } from '@react-navigation/native';
 
 
 const SignInScreen = () =>{
@@ -16,7 +16,7 @@ const SignInScreen = () =>{
     const navigation = useNavigation();
 
     const onSignInPress = () =>{
-    
+        console.log('onSignInpressed');
         navigation.navigate('Home');
     }
     const onForgotPassword = () =>{
@@ -24,6 +24,7 @@ const SignInScreen = () =>{
     }
     const onSignUpPress = () =>{
         navigation.navigate('SignUp');
+        console.warn('Apple')
     }
 
     
@@ -51,21 +52,22 @@ const SignInScreen = () =>{
 
             <CustomeButton 
             text='Sign in' 
-            onPress={onSignInPress}
-            type = 'PRIMARY' 
+            onSignInPress={onSignInPress}
+         
             />
 
-            <CustomeButton 
+            <CustomeButton
             text='Forgot Password?' 
             onPress={onForgotPassword}
             type = 'TERTIARY'    
             />    
             <SocialSignInButton/> 
             
-            <CustomButton
+            <CustomeButton
             text="Don't have an account? Create one"
             onPress={onSignUpPress}
-            type="TERTIARY"
+            bgColor='grey'
+            fgColor='#090909'
             />
         </View>
         </ScrollView>
